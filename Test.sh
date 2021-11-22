@@ -35,7 +35,7 @@ for DS in "${DATASETS[@]}"
   #
   for((x=1;x<=22;++x)); 
     do
-    mkdir -d tmp-naf; 
+    mkdir -p tmp-naf; 
     (/usr/bin/time -f "%e" ennaf --temp-dir tmp-naf --level $x -o $DS-$x.naf $DS 1> report_stdout_naf_$x ) 2> report_stderr_naf_$x;
     (/usr/bin/time -f "%e" unnaf -o $F2 $DS-$x.naf 1> report_stdout_unnaf_$x ) 2> report_stderr_unaf_$x; 
     grep ">" $F2 > headers2; 
