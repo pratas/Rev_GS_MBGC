@@ -2,8 +2,8 @@
 #
 # TOOLS INSTALLATION ###########################################################
 #
-#conda install -c bioconda mbgc -y
-#conda install -c bioconda naf -y
+conda install -c bioconda mbgc -y
+conda install -c bioconda naf -y
 #conda install -c bioconda geco3 -y
 #
 # GET AND UNCOMPRESS DATASETS ##################################################
