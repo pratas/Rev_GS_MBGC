@@ -19,7 +19,6 @@ chmod +x Test.sh
 
 Run:
 <pre>
-conda install -c bioconda -y
 chmod +x GeCo3.sh
 chmod +x Test_GeCo3.sh
 ./GeCo3.sh --install
