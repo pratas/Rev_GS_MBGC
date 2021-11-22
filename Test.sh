@@ -34,8 +34,9 @@ for DS in "${DATASETS[@]}"
   printf "Level\tBytes\tC_Sec\tD_sec\tHeader_flaw\tDNA_flaw\n";
   #
   for((x=1;x<=22;++x)); 
-    do 
-    (/usr/bin/time -f "%e" ennaf --temp-dir test --level $x -o $DS-$x.naf $DS 1> report_stdout_naf_$x ) 2> report_stderr_naf_$x;
+    do
+    mkdir -d tmp-naf; 
+    (/usr/bin/time -f "%e" ennaf --temp-dir tmp-naf --level $x -o $DS-$x.naf $DS 1> report_stdout_naf_$x ) 2> report_stderr_naf_$x;
     (/usr/bin/time -f "%e" unnaf -o $F2 $DS-$x.naf 1> report_stdout_unnaf_$x ) 2> report_stderr_unaf_$x; 
     grep ">" $F2 > headers2; 
     grep -v ">" $F2 | tr -d '\n' > dna2; 
