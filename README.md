@@ -1,3 +1,10 @@
+## Datasets
+
+<pre>
+BDB.fa - set of bacterial complete genomes;
+VDB.fa - set of viral complete genomes;
+</pre>
+
 ## Testing and benchmarking MBGC and NAF ##
 
 Run:
@@ -9,6 +16,8 @@ chmod +x Test.sh
 </pre>
 
 ## Testing and benchmarking GeCo3 ##
+
+Run:
 <pre>
 conda install -c bioconda -y
 chmod +x GeCo3.sh
